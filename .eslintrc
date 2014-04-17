@@ -25,7 +25,7 @@
     "valid-typeof": true,
     "block-scoped-var": true,
     "complexity": [1,2],
-    "curly": [2, "multi"],
+    "curly": [2, "all"],
     "dot-notation": true,
     "eqeqeq": "smart",
     "no-alert": true,
