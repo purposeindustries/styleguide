@@ -1,4 +1,8 @@
 {
+  "env": {
+    "browser": true,
+    "node": true
+  },
   rules: {
     "no-cond-assign": true,
     "no-console": true,
