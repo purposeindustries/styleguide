@@ -1,6 +1,8 @@
 # Purposeindustries JavaScript Style Guide() {
 
 *Based on [airbnb/javascript](http://github.com/airbnb/javascript) and [felixge/node-style-guide](http://github.com/felixge/node-style-guide)*
+
+
 *A mostly reasonable approach to JavaScript*
 
 
