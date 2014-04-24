@@ -3,7 +3,7 @@
     "browser": true,
     "node": true
   },
-  rules: {
+  "rules": {
     "no-cond-assign": true,
     "no-console": true,
     "no-constant-condition": true,
