@@ -105,6 +105,7 @@
     "wrap-regex": true,
     "max-len": [1, 80, 4],
     "no-mixed-requires": true,
-    "consistent-return": false
+    "consistent-return": false,
+    "space-after-keywords": true
   }
 }
