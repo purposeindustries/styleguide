@@ -204,9 +204,6 @@
     // use vars if you declared them
     "no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
 
-    // disallow foo = 1; var foo
-    "no-use-before-define": 2,
-
     // so many callbacks, so little time to handle them...
     "handle-callback-err": 0,
 
