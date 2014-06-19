@@ -4,108 +4,294 @@
     "node": true
   },
   "rules": {
-    "no-cond-assign": true,
-    "no-console": true,
-    "no-constant-condition": true,
-    "no-comma-dangle": false,
-    "no-debugger": true,
-    "no-dupe-keys": true,
-    "no-empty": true,
-    "no-ex-assign": true,
-    "no-extra-boolean-cast": true,
-    "no-extra-parens": false,
-    "no-extra-semi": true,
-    "no-func-assign": true,
-    "no-negated-in-lhs": true,
-    "no-obj-calls": true,
-    "no-sparse-arrays": true,
-    "no-unreachable": true,
-    "use-isnan": true,
-    "valid-jsdoc": true,
-    "valid-typeof": true,
-    "block-scoped-var": true,
-    "complexity": [1,2],
+    // disallow if(c = 1) { ... }
+    "no-cond-assign": 2,
+
+    "no-console": 2,
+    
+    // disallow if(false) { ... }
+    "no-constant-condition": 2,
+
+    // allow trailing comma
+    "no-comma-dangle": 0,
+
+    // node debugger;
+    "no-debugger": 2,
+
+    // disallow duplicate keys
+    "no-dupe-keys": 2,
+
+    // no empty blocks, like if(a) {}
+    "no-empty": 2,
+
+    // disallow catch(e) { e = 1 }
+    "no-ex-assign": 2,
+
+    // disallow !!false
+    "no-extra-boolean-cast": 2,
+
+    // allow additional parens
+    "no-extra-parens": 0,
+
+    // disallow extra semicolons
+    "no-extra-semi": 2,
+
+    // disallow function foo() {} foo = bar
+    "no-func-assign": 2,
+
+    // disallow !foo in bar
+    "no-negated-in-lhs": 2,
+
+    // disallow Math()
+    "no-obj-calls": 2,
+
+    // disallow [,,,]
+    "no-sparse-arrays": 2,
+
+    "no-unreachable": 2,
+    "use-isnan": 2,
+
+    // Ensure valid jsdoc syntax
+    "valid-jsdoc": 2,
+
+    // typeof can be compared to correct strings
+    "valid-typeof": 2,
+
+    // disallow if(a) { var b = 1 } b = 2
+    "block-scoped-var": 1,
+
+    // cyclomatic complexity (code paths) under 5
+    "complexity": [1,5],
+
+    // force curly braces always
     "curly": [2, "all"],
-    "dot-notation": true,
+
+    // use dot notation,
+    "dot-notation": 1,
+
+    // triple eq, but we are smart
     "eqeqeq": "smart",
-    "no-alert": true,
-    "no-caller": true,
-    "no-div-regex": true,
-    "no-else-return": true,
-    "no-empty-label": true,
-    "no-eq-null": false,
-    "no-eval": true,
-    "no-extend-native": true,
-    "no-fallthrough": false,
-    "no-floating-decimal": false,
-    "no-implied-eval": true,
-    "no-labels": true,
-    "no-iterator": true,
-    "no-lone-blocks": true,
-    "no-loop-func": true,
-    "no-multi-str": false,
-    "no-native-reassign": true,
-    "no-new": true,
-    "no-new-func": true,
-    "no-new-wrappers": true,
-    "no-octal": true,
-    "no-octal-escape": true,
-    "no-proto": true,
-    "no-redeclare": true,
-    "no-return-assign": true,
-    "no-script-url": true,
-    "no-self-compare": true,
-    "no-unused-expressions": true,
-    "no-warning-comments": false,
-    "no-with": true,
-    "no-yoda": true,
-    "radix": true,
+
+    // disallow alert
+    "no-alert": 2,
+
+    // disallow arguments.calle-ish magic
+    "no-caller": 2,
+
+    // no weird regexes
+    "no-div-regex": 2,
+
+    // disallow if(a) { return } else ...
+    "no-else-return": 2,
+
+    // labels? c'mon!
+    "no-empty-label": 2,
+
+    // we are smart
+    "no-eq-null": 0,
+
+    // eval is evil
+    "no-eval": 2,
+
+    // do not touch!
+    "no-extend-native": 2,
+
+    // i'm a grown up, i can use switch fallthrough
+    "no-fallthrough": 0,
+
+    // allow .1, 1.
+    "no-floating-decimal": 0,
+
+    // eval is still evil!
+    "no-implied-eval": 2,
+
+    // goto fail
+    "no-labels": 2,
+
+    // no weird __iterator__
+    "no-iterator": 2,
+
+    // disallow { foo; bar; }
+    "no-lone-blocks": 2,
+
+    // do not declare functions in loops
+    "no-loop-func": 2,
+
+    // use + or join to create long string
+    "no-multi-str": 1,
+
+    // disallow undefined = foo
+    "no-native-reassign": 2,
+
+    // disallow new Foo() without assignment
+    "no-new": 2,
+
+    // disallow new Function()
+    "no-new-func": 2,
+
+    // now new String(), etc
+    "no-new-wrappers": 2,
+
+    // no 0123
+    "no-octal": 2,
+
+    // no '\123'
+    "no-octal-escape": 2,
+
+    // no __proto__
+    "no-proto": 2,
+
+    // disallow var foo; var foo;
+    "no-redeclare": 2,
+
+    // disallow return c = 1
+    "no-return-assign": 2,
+
+    // you must be jokin'!
+    "no-script-url": 2,
+
+    // disallow foo == foo
+    "no-self-compare": 2,
+
+    // disallow 'hello world' without assign
+    "no-unused-expressions": 2,
+
+    // allow TODO comments
+    "no-warning-comments": 0,
+
+    // disallow with
+    "no-with": 2,
+
+    // disallow if(1 == foo)
+    "no-yoda": 2,
+
+    // use radix in parseint
+    "radix": 2,
+
+    // use (function(){}())
     "wrap-iife": [2,"outside"],
-    "no-global-strict": false,
-    "no-extra-strict": true,
-    "strict": true,
-    "no-catch-shadow": true,
-    "no-delete-var": true,
-    "no-label-var": true,
+
+    // allow 'use strict' on global scope
+    "no-global-strict": 0,
+
+    // disallow redundant 'use strict'
+    "no-extra-strict": 2,
+
+    // must strict!
+    "strict": 2,
+
+    // disallow var e; catch(e)
+    "no-catch-shadow": 2,
+
+    // only properties can be deleted
+    "no-delete-var": 2,
+
+    // disallow var foo; switch(bar) { foo: }
+    "no-label-var": 2,
+
+    // allow var shadow
     "no-shadow": false,
-    "no-shadow-restricted-names": true,
-    "no-undef": true,
-    "no-undef-init": true,
+
+    // disallow var arguments
+    "no-shadow-restricted-names": 2,
+
+    // disallow using undeclared vars
+    "no-undef": 2,
+
+    // disallow var foo = undefined
+    "no-undef-init": 2,
+
+    // use vars if you declared them
     "no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
-    "no-use-before-define": true,
-    "handle-callback-err": false,
-    "no-path-concat": true,
-    "no-process-exit": false,
-    "no-sync": false,
-    "brace-style": "1tbs",
-    "camelcase": true,
-    "consistent-this": [0, "self"],
-    "func-names": false,
-    "func-style": false,
-    "new-cap": true,
+
+    // disallow foo = 1; var foo
+    "no-use-before-define": 2,
+
+    // so many callbacks, so little time to handle them...
+    "handle-callback-err": 0,
+
+    // 
+    "no-path-concat": 2,
+
+    // sometimes we crash on purpose...
+    "no-process-exit": 0,
+
+    // sometimes we use sync on purpose
+    "no-sync": 0,
+
+    // one true brace style
+    "brace-style": [2, "1tbs"],
+
+    // camelCase variables
+    "camelcase": 2,
+
+    // use self as alias for this
+    "consistent-this": [2, "self"],
+
+    // allow anonymous funcs
+    "func-names": 0,
+
+    // allow func expressions
+    "func-style": 0,
+
+    // allow function Foo()
+    "new-cap": 2,
+
+    // disallow new Foo
     "new-parens": true,
-    "no-nested-ternary": true,
-    "no-array-constructor": true,
-    "no-new-object": true,
-    "no-spaced-func": true,
-    "no-space-before-semi": true,
-    "no-ternary": false,
-    "no-underscore-dangle": false,
-    "no-wrap-func": true,
+
+    // disallow nested ternary, so you can decode what your code does after a week
+    "no-nested-ternary": 2,
+
+    // disallow new Array
+    "no-array-constructor": 2,
+
+    // disallow new Object
+    "no-new-object": 2,
+
+    // disallow foo (1, 2)
+    "no-spaced-func": 2,
+
+    // disallow foo ;
+    "no-space-before-semi": 2,
+
+    // allow ternary
+    "no-ternary": 0,
+
+    // allow var _foo
+    "no-underscore-dangle": 0,
+
+    // wrap only iife
+    "no-wrap-func": 2,
+
+    // single quotes!
     "quotes": [2, "single", "avoid-escape"],
-    "quote-props": false,
+
+    // use quotes in props as you wish
+    "quote-props": 0,
+
+    // we like semicolons
     "semi": [2, "always"],
-    "sort-vars": true,
+
+    // sort vars alphabetically!
+    "sort-vars": 2,
+
+    // never use spaces
     "space-in-brackets": [2, "never"],
-    "space-infix-ops": true,
-    "space-return-throw-case": true,
-    "space-unary-word-ops": true,
+
+    // use spaces!
+    "space-infix-ops": 2,
+
+    "space-return-throw-case": 2,
+    "space-unary-word-ops": 2,
     "max-nested-callbacks": [2, 4],
-    "one-var": false,
-    "wrap-regex": true,
+
+    // allow multiple var statements
+    "one-var": 0,
+    "wrap-regex": 2,
     "max-len": [1, 80, 4],
-    "no-mixed-requires": true,
-    "consistent-return": false,
-    "space-after-keywords": true
+    "no-mixed-requires": 2,
+    "consistent-return": 0,
+    "space-after-keywords": 2
   }
 }
