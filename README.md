@@ -1435,10 +1435,38 @@
 
 ## Testing
 
+- For tests, use [mocha](http://visionmedia.github.io/mocha/) or [tape](https://github.com/substack/tape).
 
+- For asserting, use [should](https://github.com/visionmedia/should.js/).
+
+- For testing http servers, use [supertest](https://github.com/visionmedia/supertest/).
+
+- If you need coverage, use [istanbul]() ([usage with mocha](https://github.com/gotwarlost/istanbul/issues/44))
+
+- To test modules, use `module.method` descriptions
+
+  ```js
+  describe('module', function() {
+    describe('.method', function() {
+      // test module.method
+    })
+  });
+  ```
+
+- To test instance methods, use `instance#method` descriptions
+
+  ```js
+  describe('MyClass', function() {
+    describe('#method', function() {
+      it('should work', function() {
+        var instance = new MyClass();
+        // test stuff here
+      });
+    });
+  });
+  ```
 
 **[⬆ back to top](#table-of-contents)**
-
 
 ## Performance
 
