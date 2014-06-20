@@ -92,13 +92,17 @@
   ```javascript
   // bad
   var superman = {
-    default: { clark: 'kent' },
+    default: {
+      clark: 'kent'
+    },
     private: true
   };
 
   // good
   var superman = {
-    defaults: { clark: 'kent' },
+    defaults: {
+      clark: 'kent'
+    },
     hidden: true
   };
   ```
