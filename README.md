@@ -1351,6 +1351,8 @@
       index.js
   ```
 
+- Use `postinstall` script to set up symlinks.
+
 **[⬆ back to top](#table-of-contents)**
 
 
