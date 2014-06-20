@@ -11,7 +11,7 @@
     "after": true,
     "beforeEach": true,
     "afterEach": true
-  }
+  },
   "rules": {
     // disallow if(c = 1) { ... }
     "no-cond-assign": 2,
