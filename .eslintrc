@@ -3,12 +3,21 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "should": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true
+  },
   "rules": {
     // disallow if(c = 1) { ... }
     "no-cond-assign": 2,
 
     "no-console": 2,
-    
+
     // disallow if(false) { ... }
     "no-constant-condition": 2,
 
