@@ -1435,7 +1435,7 @@
 
 ## Testing
 
-- For tests, use [mocha](http://visionmedia.github.io/mocha/) or [tape](https://github.com/substack/tape).
+- For tests, use [mocha](http://mochajs.org/) or [tape](https://github.com/substack/tape).
 
 - For asserting, use [should](https://github.com/visionmedia/should.js/).
 
